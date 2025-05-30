@@ -1,0 +1,78 @@
+.dropdown-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-icon {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    user-select: none;
+}
+
+.dropdown-icon img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    padding: 8px 0;
+    opacity: 0;
+    transform: scale(0.95);
+    transform-origin: top left;
+    transition: opacity 200ms ease, transform 200ms ease;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.dropdown-menu.visible {
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.dropdown-menu.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.dropdown-menu.hide {
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 16px;
+    color: #1c1b1f;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 8px;
+    transition: background-color 150ms;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f0f0f0;
+}
+
+.dmm-item-link.dmm-icon-before img {
+    margin-right: 6px;
+}
+
+.dmm-item-link.dmm-icon-after img {
+    margin-left: 6px;
+}
+
+.dmm-item-link.dmm-icon-opposite {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
